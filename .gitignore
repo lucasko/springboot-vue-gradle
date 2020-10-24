@@ -1,10 +1,9 @@
 .gradle
 .idea
 ./build/
-./frontend/dist/
-./frontend/node_modules/
-.DS_Store
-./src/main/webapp/*
+frontend/dist/
+frontend/node_modules/
+src/main/webapp/*
 
 .DS_Store
 node_modules
