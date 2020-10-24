@@ -52,7 +52,13 @@ task buildFrontend { ->
                 commandLine command
                 project.logger.lifecycle( "  > ${command.join(" ")}")
             }
+
+            command = [ "cp" , '-R' , 'frontend/dist/' , "src/main/webapp/" ]
+            exec {
+                commandLine command
+                project.logger.lifecycle( "  > ${command.join(" ")}")
+            }
     }
 }
-//build.finalizedBy(buildFrontend)
+build.dependsOn(buildFrontend)
 
