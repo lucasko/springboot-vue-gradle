@@ -1,6 +1,7 @@
 
 
-run_frontend:
+run/frontend:
+	cd frontend/ && \
 	npm run serve  -- --port 3000
 
 build_:

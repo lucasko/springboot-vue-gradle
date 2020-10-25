@@ -7,6 +7,16 @@
     <button @click="greet">Greet</button>
   </div>
 
+	<div v-if="user.isAdmin">
+		Admin
+	</div>
+	<div v-else>
+		Not Admin
+	</div>
+
+	<div v-for="book in books" :key="book.id">
+		<b>{{book.name}}</b> : {{book.price}}
+	</div>
 
   {{	user.username	}} =
   {{	fullName	}}
@@ -30,8 +40,15 @@ export default {
 			username: "ru ko",
 			fname : "lucas",
 			lname : "ko",
-			address:  "AB1 CD2"
-		}
+			address:  "AB1 CD2",
+			isAdmin: false
+		},
+		books : [
+			{ id:1,  name:"A",price: 100},
+			{ id:2,  name:"B",price: 200},
+			{ id:3,  name:"C",price: 300},
+			{ id:4,  name:"D",price: 400}
+		]
 	}
 	},
 	watch: {
